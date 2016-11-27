@@ -1,4 +1,4 @@
-import Bignum
+import BigInteger
 
 public enum Group {
     case N2048
