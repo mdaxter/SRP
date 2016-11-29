@@ -1,5 +1,5 @@
 import Foundation
-import BigInteger
+import BignumGMP
 
 public class Server {
     internal let b: Bignum

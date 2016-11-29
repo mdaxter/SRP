@@ -1,4 +1,4 @@
-import BigInteger
+import BignumGMP
 
 public enum Group {
     case N2048
@@ -35,9 +35,9 @@ public enum Group {
     var g: Bignum {
         switch self {
         case .N2048:
-            return Bignum(hex: "2")
+            return 2
         case .N3072:
-            return Bignum(hex: "5")
+            return 5
         }
     }
 }

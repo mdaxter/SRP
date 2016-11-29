@@ -1,5 +1,6 @@
 import XCTest
-import BigInteger
+import Foundation
+import BignumGMP
 @testable import SRP
 
 class SRPTests: XCTestCase {
