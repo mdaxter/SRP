@@ -1,5 +1,6 @@
 import Foundation
-import BignumGMP
+import Bignum
+import CommonCrypto
 
 public func createSaltedVerificationKey(username: String, password: String, salt: Data? = nil, group: Group = .N2048, alg: Digest = .SHA1) -> (salt: Data, verificationKey: Data) {
     let salt = salt ?? generateRandomBytes(count: 16)

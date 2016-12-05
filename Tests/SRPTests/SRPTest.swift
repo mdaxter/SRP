@@ -1,24 +1,9 @@
 import XCTest
-import Foundation
-import BignumGMP
+import CommonCrypto
 @testable import SRP
 
 class SRPTests: XCTestCase {
-	func testMD5() {
-		let data = "Hello".data(using: .utf8)!
-		let hash = Digest.MD5.hash(data)
-		let expect = Bignum(hex: "8b1a9953c4611296a827abf8c47804d7").data
-		XCTAssertEqual(hash, expect)
-	}
-
-	func testSHA512() {
-		let data = "Hello".data(using: .utf8)!
-		let hash = Digest.SHA512.hash(data)
-		let expect = Bignum(hex: "3615f80c9d293ed7402687f94b22d58e529b8cc7916f8fac7fddf7fbd5af4cf777d3d795a7a00a16bf7e7f3fb9561ee9baae480da9fe7a18769e71886b03f315").data
-		XCTAssertEqual(hash, expect)
-	}
-
-    func testClientServer() throws {
+    func test() throws {
         let username = "Pair-Setup"
         let password = "001-02-003"
 
@@ -81,9 +66,7 @@ class SRPTests: XCTestCase {
 
     static var allTests : [(String, (SRPTests) -> () throws -> Void)] {
         return [
-			("testMD5",				testMD5),
-			("testSHA512",			testSHA512),
-            ("testClientServer",	testClientServer),
+            ("test", test),
         ]
     }
 }

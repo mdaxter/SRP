@@ -1,5 +1,6 @@
 import Foundation
-import BignumGMP
+import Bignum
+import CommonCrypto
 
 public class Client {
     internal let a: Bignum
