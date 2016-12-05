@@ -1,4 +1,5 @@
 import XCTest
+import Foundation
 import CommonCrypto
 @testable import SRP
 
